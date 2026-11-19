@@ -109,6 +109,21 @@
         </div>
         <p>Developed a reusable ArduPlane Lua mixer that converts roll, pitch, and yaw demands into commands for four X-tail surfaces, including combined-axis inputs. The mixer runs at 50 Hz on a Matek H743 flight controller.</p>
         <p class="xtail-details">Implemented configurable axis gains and fin reversals, ground-station trim parameters, PWM limits, and DataFlash logging. Working toward a native C++ implementation.</p>
+        <div class="xtail-demo">
+          <h4>X-tail mixer bench test</h4>
+          <p>With the flight computer set to a 5° roll offset and a 3° pitch offset, the test commands pitch up, pitch down, roll right, roll left, yaw right, and yaw left, in that order.</p>
+          <video class="xtail-video" autoplay muted loop playsinline controls preload="metadata" aria-label="X-tail mixer bench test showing pitch, roll, and yaw commands">
+            <source src="assets/xtail-mixer-demo.mp4" type="video/mp4">
+            Your browser does not support embedded video.
+          </video>
+          <script>
+            if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+              const video = document.currentScript.previousElementSibling;
+              video.autoplay = false;
+              video.pause();
+            }
+          </script>
+        </div>
         <figure class="vfs-figure xtail-figure"><a href="https://github.com/ddylanbowess/ArduPilot-XTail-Mixer" target="_blank" rel="noopener noreferrer"><img src="assets/xtail-repo.png" alt="ArduPilot X-Tail Mixer GitHub repository" loading="lazy"></a><figcaption>Open-source X-tail mixer on GitHub</figcaption></figure>
         <div class="tags"><span>ArduPilot</span><span>Lua</span><span>Control allocation</span><span>MAVLink</span></div>
         <div class="project-links"><a href="https://github.com/ddylanbowess/ArduPilot-XTail-Mixer" target="_blank" rel="noopener noreferrer">View the X-tail mixer repository</a></div>
