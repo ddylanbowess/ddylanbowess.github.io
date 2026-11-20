@@ -50,7 +50,7 @@
           <div>
             <h4>Doberman V1</h4>
             <p>Designed and built Doberman V1 in my dorm room, from CAD and printed parts to an assembled aircraft. The design used a semi-monocoque fuselage and a custom X-tail, with an ArduPilot mixer for the four tail surfaces. Integrated onboard detection with the flight controls; bench testing demonstrated the detection-to-control movement pipeline. Built a custom detection dataset with annotations and backgrounds reflecting the flight-test environment; the dataset screenshot shows 17,150 items.</p>
-            <p class="specs"><strong>Airframe:</strong> 3 kg all-up weight · 1.3 m wingspan · SD7062 airfoil<br><strong>Performance:</strong> 45 min endurance · 18 m/s cruise<br><strong>Vision bench test:</strong> ~70 ms inference · ~120 ms end-to-end latency</p>
+            <p class="specs"><strong>Airframe:</strong> 3 kg all-up weight · 1.3 m wingspan · SD7062 airfoil<br><strong>Flight test:</strong> 45 minutes on first flight<br><strong>Cruise speed:</strong> 18 m/s<br><strong>Vision bench test:</strong> ~70 ms inference · ~120 ms end-to-end latency</p>
           </div>
           <div>
             <h4>Doberman V2</h4>
@@ -60,7 +60,7 @@
         </div>
         <section class="postmortem" aria-labelledby="postmortem-title">
           <h4 id="postmortem-title">What V1 taught me</h4>
-          <p>Doberman V1 crashed on both of its flight attempts. On the first flight, I underestimated the X-tail root bending moment at maximum speed and deflection. The load sheared a mounting screw and separated a tail surface, resulting in what I can only describe as an “unexpected rapid mid-flight disassembly.” On the second, a hard crash after takeoff in strong crosswinds caused the landing gear to come apart. An uneven runway and limited low-speed roll authority from the X-tail-only layout also made the takeoff challenging.</p>
+          <p>Doberman V1 crashed on both of its flight attempts. After 45 minutes on the first flight, the X-tail root bending moment at maximum speed and deflection exceeded what I had anticipated. The load sheared a mounting screw and separated a tail surface, resulting in what I can only describe as an “unexpected rapid mid-flight disassembly.” On the second, a hard crash after takeoff in strong crosswinds caused the landing gear to come apart. An uneven runway and limited low-speed roll authority from the X-tail-only layout also made the takeoff challenging.</p>
           <p>Those failures highlighted the need to rethink control-surface attachments, landing-gear load paths, and roll authority as airspeed builds. For Doberman V2, I’m replacing the X-tail with a V-tail, adding wing ailerons, and redesigning the landing gear. I’m fully 3D printing the airframe in sections to make it easier to build and replace damaged parts.</p>
           <p>V1 also gave me hands-on experience with semi-monocoque construction, Raspberry Pi and MAVLink integration, EMI and vibration management, PID tuning, and training and evaluating detection models.</p>
         </section>
@@ -159,7 +159,8 @@
         <article class="project" aria-labelledby="fitzgerald-title">
           <p class="eyebrow">Aircraft design · Aerodynamics</p>
           <h3 id="fitzgerald-title">Fitzgerald Logistics UAV</h3>
-          <p>A twin-boom pusher aircraft concept developed in Fusion 360 and OpenVSP. Used VSPAERO to examine spanwise loading and the lift–drag relationship, alongside flight simulation work.</p>
+          <p>A twin-boom pusher concept for autonomous medical-supply delivery, developed in Fusion 360 and OpenVSP. Used VSPAERO to examine spanwise loading and the lift–drag relationship, alongside flight simulation work. The concept included GNSS-denied navigation using the visual-odometry project I was developing in parallel.</p>
+          <p class="specs"><strong>Design targets:</strong> 3.2 m wingspan · 20 mile range · 30 m/s cruise</p>
           <figure class="analysis-figure"><a href="assets/fitzgerald-cad.png" target="_blank" rel="noopener"><img src="assets/fitzgerald-cad.png" alt="Fitzgerald twin-boom aircraft CAD model" loading="lazy"></a><figcaption>Fitzgerald aircraft model</figcaption></figure>
           <figure class="analysis-figure"><a href="assets/fitzgerald-drag-polar.png" target="_blank" rel="noopener"><img src="assets/fitzgerald-drag-polar.png" alt="Fitzgerald VSPAERO lift and drag plot" loading="lazy"></a><figcaption>Fitzgerald VSPAERO lift and drag analysis</figcaption></figure>
           <div class="tags"><span>Fusion 360</span><span>OpenVSP</span><span>VSPAERO</span></div>
