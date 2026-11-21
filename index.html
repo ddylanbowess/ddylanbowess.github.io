@@ -60,7 +60,7 @@
         </div>
         <section class="postmortem" aria-labelledby="postmortem-title">
           <h4 id="postmortem-title">What V1 taught me</h4>
-          <p>Doberman V1 crashed on both of its flight attempts. After 45 minutes on the first flight, the X-tail root bending moment at maximum speed and deflection exceeded what I had anticipated. The load sheared a mounting screw and separated a tail surface, resulting in what I can only describe as an “unexpected rapid mid-flight disassembly.” On the second, a hard crash after takeoff in strong crosswinds caused the landing gear to come apart. An uneven runway and limited low-speed roll authority from the X-tail-only layout also made the takeoff challenging.</p>
+          <p>Doberman V1 crashed on both of its flight attempts. After 45 minutes on the first flight, the aircraft reached approximately 25 m/s with the X-tail at maximum deflection. I had underestimated the resulting root bending moment, and the load tore the brass inserts out of the lower-left tail surface’s PETG mount. I addressed the failure by limiting maximum deflection and using a deeper mount with longer brass inserts for more engagement. On the second flight, a hard crash after takeoff in strong crosswinds caused the landing gear to come apart. An uneven runway and limited low-speed roll authority from the X-tail-only layout also made the takeoff challenging.</p>
           <p>Those failures highlighted the need to rethink control-surface attachments, landing-gear load paths, and roll authority as airspeed builds. For Doberman V2, I’m replacing the X-tail with a V-tail, adding wing ailerons, and redesigning the landing gear. I’m fully 3D printing the airframe in sections to make it easier to build and replace damaged parts.</p>
           <p>V1 also gave me hands-on experience with semi-monocoque construction, Raspberry Pi and MAVLink integration, EMI and vibration management, PID tuning, and training and evaluating detection models.</p>
         </section>
@@ -136,7 +136,7 @@
           <div><p class="eyebrow">Vertical Flight Society · Computer Vision Lead</p><h3 id="vfs-title">GNSS-Denied Visual Odometry</h3></div>
           <span class="status">In development</span>
         </div>
-        <p>Developing a vision-based navigation system for GNSS-denied flight with the Vertical Flight Society. The current desktop benchmark uses OpenCV optical flow to estimate camera motion. Raspberry Pi 5 integration, IMU derotation, rangefinder scaling, and yaw integration are next steps.</p>
+        <p>Developing a vision-based navigation system for GNSS-denied flight with the Vertical Flight Society. I built a desktop benchmark that uses OpenCV optical flow to estimate camera motion on a simulated tabletop loop, including a test with a brief tracking gap. Next, I plan to integrate the pipeline with a Raspberry Pi 5 and add IMU derotation, rangefinder scaling, and yaw integration for aircraft testing.</p>
         <div class="vfs-demo">
           <h4>Interactive visual odometry demo</h4>
           <p>Explore a recorded desktop simulation of a camera moving around a 60 × 40 cm tabletop loop. Press Play or drag the slider to compare the estimated position with the reference path. This is simulated data, not a flight test.</p>
